@@ -42,8 +42,9 @@ try {
 app.post("/v1/tasks" ,async (req,res)=>{
    try {
     const data=await tittleModel.create(req.body)
+    // const id=data.id
     res.status(201).json({
-        data
+        id:data.id
     })
    } catch (err) {
 
